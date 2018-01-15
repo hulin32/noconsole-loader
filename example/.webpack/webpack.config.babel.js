@@ -1,9 +1,9 @@
-import path from 'path';
+const path = require('path');
 
 module.exports = {
-  entry: './file.js',
+  entry: path.resolve(`${__dirname}/../`, '') + '/file.js',
   output: {
-    path: path.resolve(`${__dirname}/../`, 'dist'),
+    path: path.resolve(`${__dirname}/../`),
     filename: 'bundle.js',
   },
   module: {
@@ -12,7 +12,7 @@ module.exports = {
         test: /\.js$/,
         use: [
           {
-            loader: path.resolve(`${__dirname}/../`, 'src') + '/loader.js',
+            loader: path.resolve(`${__dirname}/../../`, 'src') + '/index.js',
           },
           {
             loader: 'babel-loader',
