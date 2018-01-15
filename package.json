@@ -7,7 +7,7 @@
     "load": "node_modules/.bin/webpack -p --config .webpack/webpack.config.babel.js"
   },
   "keywords": ["delete log"],
-  "author": "hulin",
+  "author": "flyingalex",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
